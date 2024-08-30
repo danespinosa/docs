@@ -19,7 +19,7 @@ This article summarizes key new features and improvements in the following versi
 - [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4.7](#v47)
+- [.NET Framework 4.7](#whats-new-in-net-framework-47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 and .NET Framework 4.6](#v46)
@@ -401,7 +401,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 Starting with .NET Framework 4.7.2, the implementation of decompression operations in the <xref:System.IO.Compression.DeflateStream> class has changed to use native Windows APIs by default. Typically, this results in a substantial performance improvement.
 
-Support for decompression by using Windows APIs is enabled by default for applications that target .NET Framework 4.7.2. Applications that target earlier versions of .NET Framework but are running under .NET Framework 4.7.2 can opt into this behavior by adding the following [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) to the application configuration file:
+Support for decompression by using Windows APIs is enabled by default for applications that target .NET Framework 4.7.2. Applications that target earlier versions of .NET Framework but are running under .NET Framework 4.7.2 can opt in to this behavior by adding the following [AppContext switch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) to the application configuration file:
 
 ```xml
 <AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=false" />
@@ -723,7 +723,7 @@ In .NET Framework 4.7 and earlier versions, ASP.NET allowed developers to store 
 </system.web>
 ```
 
-<a name="v47"></a>
+[!INCLUDE [managed-identities](../includes/managed-identities.md)]
 
 ## What's new in .NET Framework 4.7
 
@@ -1231,7 +1231,7 @@ For example, the following XAML groups data by age, sort the age groups in ascen
 
 Touch keyboard support enables focus tracking in WPF applications by automatically invoking and dismissing the touch Keyboard in Windows 10 when the touch input is received by a control that can take textual input.
 
-In previous versions of .NET Framework, WPF applications can't opt into the focus tracking without disabling WPF pen/touch gesture support. As a result, WPF applications must choose between full WPF touch support or rely on Windows mouse promotion.
+In previous versions of .NET Framework, WPF applications can't opt in to the focus tracking without disabling WPF pen/touch gesture support. As a result, WPF applications must choose between full WPF touch support or rely on Windows mouse promotion.
 
 **Per-monitor DPI**
 

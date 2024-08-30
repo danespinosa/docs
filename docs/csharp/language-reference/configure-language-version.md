@@ -2,7 +2,7 @@
 title: Configure language version
 description: Learn how to override the default C# language version manually.
 ms.custom: "updateeachrelease"
-ms.date: 10/30/2023
+ms.date: 08/02/2024
 ---
 
 # Configure C# language version
@@ -43,3 +43,9 @@ To configure multiple projects, you can create a *Directory.Build.props* file, t
 ```
 
 Builds in all subdirectories of the directory containing that file now use the preview C# version. For more information, see [Customize your build](/visualstudio/msbuild/customize-your-build).
+
+## C# language version reference
+
+The following table shows all current C# language versions. Older compilers might not understand every value. If you install the latest .NET SDK, you have access to everything listed.
+
+[!INCLUDE [langversion-table](includes/langversion-table.md)]
